@@ -1,3 +1,5 @@
+package game;
+
 public class Vector2D {
     public double x;
     public double y;
@@ -6,7 +8,7 @@ public class Vector2D {
         this(0, 0 ); // gan x = 0, y = 0
     }
 
-    public Vector2D(double X, double Y) {
+    public Vector2D(double x, double y) {
         this.x = x;
         this.y = y;
     }
@@ -53,22 +55,33 @@ public class Vector2D {
             y = Math.sin(angle) * length;
         }
     }
-    public static void main(String[] args) {
-//        Math.sqrt();
-//        Math.pow();
-//        Math.sin(Math.PI / 4); ~ m
-//        Math.asin(m); ~ Math.PI / 4
-        Vector2D v1 = new Vector2D(3, 3);
-        System.out.println(v1.getLength() + " " + Math.sqrt(18)); // ~4,2
-        System.out.println(v1.getAngle() + " " + (Math.PI / 4));// Math.PI / 4
 
-        v1.setLength(10);
-        System.out.println(v1.getLength() + " " + 10);// 10
-        v1.setAngle(Math.PI / 6);
-        System.out.println(v1.getAngle() + " " + (Math.PI / 6)); //Math.PI/6
+    @Override
+    public String toString() {
+        return "Vector2D{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
 
+
+
+    //    public static void main(String[] args) {
+////        Math.sqrt();
+////        Math.pow();
+////        Math.sin(Math.PI / 4); ~ m
+////        Math.asin(m); ~ Math.PI / 4
+//        Vector2D v1 = new Vector2D(3, 3);
+//        System.out.println(v1.getLength() + " " + Math.sqrt(18)); // ~4,2
+//        System.out.println(v1.getAngle() + " " + (Math.PI / 4));// Math.PI / 4
+//
+//        v1.setLength(10);
+//        System.out.println(v1.getLength() + " " + 10);// 10
+//        v1.setAngle(Math.PI / 6);
+//        System.out.println(v1.getAngle() + " " + (Math.PI / 6)); //Math.PI/6
+//
 
 
 
     }
-}
+

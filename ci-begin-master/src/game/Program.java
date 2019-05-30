@@ -1,4 +1,4 @@
-//import java.sql.SQLOutput;
+package game;//import java.sql.SQLOutput;
 //
 ///**
 // * Created by huynq on 7/4/17.
@@ -124,6 +124,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 
 /**
  * Created by huynq on 7/4/17.
@@ -132,6 +133,34 @@ import java.awt.event.KeyEvent;
 
 public class Program {
     public static void main(String[] args) {
+//        ArrayList<String> strings = new ArrayList<>();
+////        size = 0
+//        strings.add("hello");
+//        strings.add("World");
+//        for(int i = 0; i < strings.size(); i++) {
+//            String element = strings.get(i);
+//            System.out.println(element);
+//        }
+//        ArrayList<Vector2D> vectors = new ArrayList<>();
+//        vectors.add(new Vector2D(0, 0));
+//        vectors.add(new Vector2D(2, 3));
+//        vectors.add(new Vector2D(-4, 5));
+//        vectors.add(new Vector2D(6, -7));
+//        double max = 0;
+//        double maxIndex = 0;
+//        for (int i = 0; i < vectors.size(); i++) {
+//            Vector2D vector = vectors.get(i);
+//            if (vector.x + vector.y > max) {
+//                maxIndex = i;
+//            }
+//            System.out.println(vectors.get(maxIndex));
+//        }
+
+
+        //.add()
+        //.remove()
+        //.get()
+        //.size()
         JFrame window = new JFrame();
         window.setTitle("Game Touhou");
 //        window.setSize(800, 600);//px
@@ -152,6 +181,9 @@ public class Program {
                 if(e.getKeyCode() == KeyEvent.VK_D) {
                     KeyEventPress.isRightPress = true;
                 }
+                if(e.getKeyCode() == KeyEvent.VK_SPACE) {
+                    KeyEventPress.isFirePress = true;
+                }
             }
             @Override
             public void keyReleased(KeyEvent e) {
@@ -166,6 +198,9 @@ public class Program {
                 }
                 if(e.getKeyCode() == KeyEvent.VK_D) {
                     KeyEventPress.isRightPress = false;
+                }
+                if(e.getKeyCode() == KeyEvent.VK_SPACE) {
+                    KeyEventPress.isFirePress = false;
                 }
             }
         });
