@@ -163,7 +163,6 @@ public class Program {
         //.size()
         JFrame window = new JFrame();
         window.setTitle("Game Touhou");
-//        window.setSize(800, 600);//px
         window.setResizable(false);
         window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         window.addKeyListener(new KeyAdapter() {
@@ -210,7 +209,9 @@ public class Program {
         GamePanel panel = new GamePanel();
         panel.setBackground(Color.CYAN);
         window.add(panel);
-        panel.setPreferredSize(new Dimension(800, 600));
+        panel.setPreferredSize(
+                new Dimension(Settings.GAME_WIDTH, Settings.GAME_HEIGHT)
+        );
         window.pack();
 
         window.setVisible(true);
